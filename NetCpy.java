@@ -1,11 +1,15 @@
 import java.net.*;
-import java.io.*
+import java.io.*;
 //import java.util.Scanner;
 
 public class NetCpy{
-
+	private DatagramSocket socket = null;
+	private FileHandlers fileH = null;
+	private String sourceFilePath = "F:/Distibuted System/UDP_FileTransfer/xyz.mp4";
+	private String destinationPath = "C:/tmp/downloads/udp/";
+	private String hostName = "localHost";
+	
 	public static void main(String[] args) {
-		DatagramSocket socket = null;
 		try
 		{
 			socket = new DatagramSocket();
@@ -40,3 +44,4 @@ public class NetCpy{
 				socket.close();
 		}
 	}
+}
